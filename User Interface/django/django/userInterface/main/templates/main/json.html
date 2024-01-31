@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nabil</title>
+</head>
+<body>
+<form method="post" action="{% url 'process_data' %}">
+  {% csrf_token %}
+  <input type="text" name="my_variable" value="{{ my_variable }}">
+
+</form>
+</body>
+</html>

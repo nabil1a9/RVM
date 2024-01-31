@@ -1,0 +1,35 @@
+   <table >
+                                    <thead>
+                                        <tr>
+                                            <th>id</th>
+                                            <th>type boutaille</th>
+
+
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                                                    {% for k in b %}
+                                    <tr>
+                                    <td>{{ k.id }}</td>
+                                    <td>{{ k.type }}</td>
+                                  </tr>
+                                    {% endfor %}
+                                    <tr>
+                                        <td>nombre de boutailles plastique = {{i}}</td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>nombre de boutailles alu = {{j}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>notre note = {{moy}}</td>
+                                    </tr>
+                                    </tbody>
+       </table >
+
+   <form method="post" action="">
+       {% csrf_token %}
+       {{form}}
+<button type="submit", name="save">rate us</button>
+</form>
